@@ -10,13 +10,13 @@ if [[ ! $BASH_IT ]]; then
 fi
 
 echo "Symlinking Bash-it files to ${BASH_IT}/custom/ ..."
-ln -s ${THIS_DIR}/*.bash ${BASH_IT}/custom/
+ln -v -s ${THIS_DIR}/*.bash ${BASH_IT}/custom/
 
 function enable() {
   if [[ $1 == "plugin" ]]; then
-    ln -s ${BASH_IT}/${1}s/available/${2}.${1}.bash ${BASH_IT}/${1}s/enabled
+    ln -v -s ${BASH_IT}/${1}s/available/${2}.${1}.bash ${BASH_IT}/${1}s/enabled
   else
-    ln -s ${BASH_IT}/${1}/available/${2}.${1}.bash ${BASH_IT}/${1}/enabled
+    ln -v -s ${BASH_IT}/${1}/available/${2}.${1}.bash ${BASH_IT}/${1}/enabled
   fi
 }
 
