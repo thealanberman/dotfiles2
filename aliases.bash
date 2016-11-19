@@ -1,5 +1,6 @@
 alias l='ls -GhalF'
 alias odrive='python /usr/local/opt/odrive.py'
+alias aliases='vim $BASH_IT/custom/aliases.bash'
 
 dmg() {
   if [[ -d $1 ]] && [[ -d $2 ]]; then
